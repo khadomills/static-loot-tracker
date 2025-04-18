@@ -54,24 +54,33 @@ class StaticSelectionFrame(ctk.CTkFrame):
         ctk.CTkButton(
             self,
             text="Regular Setup",
-            command=lambda: controller.show_frame(RegularSetupPage)
+            command=lambda: self.on_click_regular(controller)
         ).pack(pady=10)
 
         ctk.CTkButton(
             self,
             text="Splits Setup",
-            command=lambda: controller.show_frame(SplitsSetupPage)
+            command=lambda: self.on_click_splits(controller)
         ).pack(pady=10)
 
-        def on_regular_click(self):
-            print("Regular Setup Activated!")
+    def on_click_regular(self, controller):
+        db.set_type(1)
+        controller.show_frame(StaticSetupFrame)
 
-        def on_static_click(self):
-            print("Splits Setup Activated!")
-            db.add_member("Khado", "GNB", 1, 3, 2, 3, 2, 3, 3, 2, 3, 3, 2, 3, )
+    def on_click_splits(self, controller):
+        db.set_type(2)
+        controller.show_frame(StaticSetupFrame)
 
 
-#icon fetching
+class StaticSetupFrame(ctk.CTkFrame):
+    def __init__(self, parent, controller):
+        super().__init__(parent)
+        self.controller = controller
+
+            #db.add_member("Khado", "GNB", 1, 3, 2, 3, 2, 3, 3, 2, 3, 3, 2, 3, )
+
+
+#icon fetching from xivapi
 async def main():
     client = XivApiClient()
     async for row in client.sheet_rows("Item", fields=["Name", "LevelItem", "Icon"]):
