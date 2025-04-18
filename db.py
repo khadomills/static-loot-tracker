@@ -89,3 +89,11 @@ def set_type(static_type):
             print("Static type set to Regular")
         else:
             print("Static type set to Splits")
+
+
+def check_type():
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT static_type FROM settings")
+        for row in cursor:
+            return row[0]

@@ -2,6 +2,7 @@ import customtkinter as ctk
 import db
 import asyncio
 from xivapi2 import XivApiClient
+from PIL import Image, ImageTk
 
 
 # --- Main App ---
@@ -44,25 +45,38 @@ class StaticSelectionFrame(ctk.CTkFrame):
         super().__init__(parent)
         self.controller = controller
 
-        ctk.CTkLabel(self, text="Initial Setup", font=("Arial", 20)).pack(pady=20)
+        # load and create background image
+
+        self.bg_image = ctk.CTkImage(Image.open("assets/m8bg.png"),
+                                     size=(1920, 1080))
+        self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image, text="")
+        self.bg_image_label.grid(row=0, column=0)
+
+        # Add overlay for widgets
+        self.overlay_frame = ctk.CTkFrame(self, fg_color="transparent")
+        self.overlay_frame.place(relx=0.5, rely=0.5, anchor="center")
+
+        # Add prompt and buttons for regular or split static
+        ctk.CTkLabel(self.overlay_frame, text="Initial Setup", font=("Arial", 20)).pack(pady=20)
         ctk.CTkLabel(
-            self,
+            self.overlay_frame,
             text="Please select if you're doing regular runs or splits:",
             font=("Arial", 15)
-        ).pack(pady=20)
+        ).pack(padx=20, pady=20)
 
         ctk.CTkButton(
-            self,
+            self.overlay_frame,
             text="Regular Setup",
             command=lambda: self.on_click_regular(controller)
         ).pack(pady=10)
 
         ctk.CTkButton(
-            self,
+            self.overlay_frame,
             text="Splits Setup",
             command=lambda: self.on_click_splits(controller)
         ).pack(pady=10)
 
+    # Button handlers to set static type and continue setup
     def on_click_regular(self, controller):
         db.set_type(1)
         controller.show_frame(StaticSetupFrame)
@@ -72,15 +86,43 @@ class StaticSelectionFrame(ctk.CTkFrame):
         controller.show_frame(StaticSetupFrame)
 
 
+# Frame for static member entry
 class StaticSetupFrame(ctk.CTkFrame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
 
-            #db.add_member("Khado", "GNB", 1, 3, 2, 3, 2, 3, 3, 2, 3, 3, 2, 3, )
+        # Configure the grid columns to be equally spaced
+        for i in range(8):  # 8 roles
+            self.grid_columnconfigure(i, weight=1)
+
+        # Add each label to its own column in the same row
+        labels = [
+            "DPS One", "DPS Two", "DPS Three", "DPS Four",
+            "Tank One", "Tank Two", "Healer One", "Healer Two"
+        ]
+
+        for i, label_text in enumerate(labels):
+            label = ctk.CTkLabel(self, text=label_text, font=("Arial", 20))
+            label.grid(row=0, column=i, padx=10, pady=(20, 0), sticky="ew")
+
+        # If splits, add split group labels
+        if db.check_type() == 2:
+
+            # Add each label to its own column in the same row
+            labels = [
+                "Split Group 1", "Split Group 2", "Split Group 1", "Split Group 2",
+                "Split Group 1", "Split Group 2", "Split Group 1", "Split Group 2"
+            ]
+
+            for i, label_text in enumerate(labels):
+                label = ctk.CTkLabel(self, text=label_text, font=("Arial", 15))
+                label.grid(row=1, column=i, padx=10, pady=5, sticky="ew")
+
+            # db.add_member("Khado", "GNB", 1, 3, 2, 3, 2, 3, 3, 2, 3, 3, 2, 3, )
 
 
-#icon fetching from xivapi
+# icon fetching from xivapi
 async def main():
     client = XivApiClient()
     async for row in client.sheet_rows("Item", fields=["Name", "LevelItem", "Icon"]):
