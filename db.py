@@ -29,23 +29,32 @@ def init_db():
             );
         """)
 
+        cursor.execute("""
+                    CREATE TABLE IF NOT EXISTS settings (
+                        static_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        setup_complete BOOLEAN NOT NULL,
+                        static_type INTEGER NOT NULL
+                    );
+                """)
+
         conn.commit()
 
+
 def add_member(
-    name,
-    job,
-    priority=0,
-    weapon=None,
-    head=None,
-    body=None,
-    chest=None,
-    gloves=None,
-    feet=None,
-    earring=None,
-    neck=None,
-    wrist=None,
-    ring1=None,
-    ring2=None
+        name,
+        job,
+        priority=0,
+        weapon=None,
+        head=None,
+        body=None,
+        chest=None,
+        gloves=None,
+        feet=None,
+        earring=None,
+        neck=None,
+        wrist=None,
+        ring1=None,
+        ring2=None
 ):
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
@@ -65,3 +74,18 @@ def add_member(
             ring1, ring2
         ))
         conn.commit()
+
+
+def set_type(static_type):
+    with sqlite3.connect(DB_PATH) as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+               INSERT INTO settings (setup_complete, static_type
+               ) VALUES (?,?)
+        """, (False, static_type
+              ))
+        conn.commit()
+        if static_type == 1:
+            print("Static type set to Regular")
+        else:
+            print("Static type set to Splits")
