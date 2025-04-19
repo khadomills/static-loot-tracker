@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861059d6-c6a6-4bb3-b64a-8ef99776368f" name="Changes" comment="Restored db.py, added settings tabl">
+    <list default="true" id="861059d6-c6a6-4bb3-b64a-8ef99776368f" name="Changes" comment="Boilerplate static member setup window created, added background">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/left_tome.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -40,6 +41,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -53,6 +55,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nmill\PycharmProjects\static-loot-tracker" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="static-loot-tracker" />
@@ -96,7 +103,8 @@
       <workItem from="1744914953510" duration="6351000" />
       <workItem from="1744925038010" duration="2617000" />
       <workItem from="1744992345790" duration="6276000" />
-      <workItem from="1745009728409" duration="5274000" />
+      <workItem from="1745009728409" duration="6403000" />
+      <workItem from="1745082724681" duration="3165000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and boilerplate frames.">
       <option name="closed" value="true" />
@@ -122,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744997664865</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Boilerplate static member setup window created, added background">
+      <option name="closed" value="true" />
+      <created>1745017471734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745017471734</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,9 +147,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit and boilerplate frames." />
     <MESSAGE value="Restored db.py, added settings tabl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restored db.py, added settings tabl" />
+    <MESSAGE value="Boilerplate static member setup window created, added background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Boilerplate static member setup window created, added background" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/static_loot_tracker$main.coverage" NAME="main Coverage Results" MODIFIED="1745017103502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/static_loot_tracker$main.coverage" NAME="main Coverage Results" MODIFIED="1745105425766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

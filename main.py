@@ -119,7 +119,6 @@ class StaticSetupFrame(ctk.CTkFrame):
                 label = ctk.CTkLabel(self, text=label_text, font=("Arial", 15))
                 label.grid(row=1, column=i, padx=10, pady=5, sticky="ew")
 
-            # db.add_member("Khado", "GNB", 1, 3, 2, 3, 2, 3, 3, 2, 3, 3, 2, 3, )
 
 
 # icon fetching from xivapi
@@ -137,3 +136,30 @@ if __name__ == "__main__":
     app.mainloop()
 
 # asyncio.run(main())
+
+
+# db.add_member(
+#     name="Alisaie",
+#     job="RDM",
+#     priority=1,
+#     curr_weapon=1001,
+#     bis_weapon=2001,
+#     curr_head=1002,
+#     bis_head=2002,
+#     curr_body=1003,
+#     bis_body=2003,
+#     curr_gloves=1004,
+#     bis_gloves=2004,
+#     curr_feet=1005,
+#     bis_feet=2005,
+#     curr_earring=1006,
+#     bis_earring=2006,
+#     curr_neck=1007,
+#     bis_neck=2007,
+#     curr_wrist=1008,
+#     bis_wrist=2008,
+#     curr_ring1=1009,
+#     bis_ring1=2009,
+#     curr_ring2=1010,
+#     bis_ring2=2010
+# )
