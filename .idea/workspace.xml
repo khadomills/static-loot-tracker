@@ -4,10 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861059d6-c6a6-4bb3-b64a-8ef99776368f" name="Changes" comment="Boilerplate static member setup window created, added background">
+    <list default="true" id="861059d6-c6a6-4bb3-b64a-8ef99776368f" name="Changes" comment="database update to add current vs desired gear. icon assets created / added">
+      <change afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/left_tome.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/armcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/armcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/chestcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/chestcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/craftedgear_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/craftedgear_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/feetcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/feetcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/headcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/headcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/legcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/legcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/neckcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/neckcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/raid_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/raid_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ringcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/ringcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/savraid_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/savraid_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/shine_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/shine_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tome_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/tome_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tomeacc_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/tomeacc_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/tomeleft_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/tomeleft_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/trial_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/trial_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/twine_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/twine_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/warcoffer_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/warcoffer_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wristcoffer_ocon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/looticons/wristcoffer_ocon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/astrologian.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/AST.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/bard.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/BRD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/blackmage.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/BLM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/dancer.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/DNC.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/darkknight.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/DRK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/dragoon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/DRG.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/gunbreaker.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/GNB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/machinist.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/MCH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/monk.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/MNK.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/ninja.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/NIN.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/paladin.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/PLD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/pct.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/PCT.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/reaper.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/RPR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/redmage.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/RDM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/sage.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/SGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/samurai.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/SAM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/scholar.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/SCH.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/summoner.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/SMN.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/vpr.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/VPR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/warrior.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/WAR.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobicons/whitemage.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/jobicons/WHM.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +62,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -57,6 +98,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nmill\PycharmProjects\static-loot-tracker\assets" />
+      <recent name="C:\Users\nmill\PycharmProjects\static-loot-tracker\assets\looticons" />
       <recent name="C:\Users\nmill\PycharmProjects\static-loot-tracker" />
     </key>
   </component>
@@ -104,7 +147,9 @@
       <workItem from="1744925038010" duration="2617000" />
       <workItem from="1744992345790" duration="6276000" />
       <workItem from="1745009728409" duration="6403000" />
-      <workItem from="1745082724681" duration="3165000" />
+      <workItem from="1745082724681" duration="3476000" />
+      <workItem from="1745105750160" duration="21477000" />
+      <workItem from="1745270617084" duration="2385000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit and boilerplate frames.">
       <option name="closed" value="true" />
@@ -138,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745017471734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="database update to add current vs desired gear. icon assets created / added">
+      <option name="closed" value="true" />
+      <created>1745105534113</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745105534113</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,9 +201,21 @@
     <MESSAGE value="Initial commit and boilerplate frames." />
     <MESSAGE value="Restored db.py, added settings tabl" />
     <MESSAGE value="Boilerplate static member setup window created, added background" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boilerplate static member setup window created, added background" />
+    <MESSAGE value="database update to add current vs desired gear. icon assets created / added" />
+    <option name="LAST_COMMIT_MESSAGE" value="database update to add current vs desired gear. icon assets created / added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/static_loot_tracker$main.coverage" NAME="main Coverage Results" MODIFIED="1745105425766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/static_loot_tracker$main.coverage" NAME="main Coverage Results" MODIFIED="1745273575194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

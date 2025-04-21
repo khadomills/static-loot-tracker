@@ -2,6 +2,7 @@ import customtkinter as ctk
 import db
 import asyncio
 from xivapi2 import XivApiClient
+from gui import StaticSetupFrame
 from PIL import Image, ImageTk
 
 
@@ -14,6 +15,7 @@ class MainApp(ctk.CTk):
         self.geometry("1920x1080")
         ctk.set_appearance_mode("Dark")
         ctk.set_default_color_theme("blue")
+        self.resizable(False, False)
 
         self.container = ctk.CTkFrame(self)
         self.container.pack(fill="both", expand=True)
@@ -52,6 +54,7 @@ class StaticSelectionFrame(ctk.CTkFrame):
         self.bg_image_label = ctk.CTkLabel(self, image=self.bg_image, text="")
         self.bg_image_label.grid(row=0, column=0)
 
+
         # Add overlay for widgets
         self.overlay_frame = ctk.CTkFrame(self, fg_color="transparent")
         self.overlay_frame.place(relx=0.5, rely=0.5, anchor="center")
@@ -86,48 +89,14 @@ class StaticSelectionFrame(ctk.CTkFrame):
         controller.show_frame(StaticSetupFrame)
 
 
-# Frame for static member entry
-class StaticSetupFrame(ctk.CTkFrame):
-    def __init__(self, parent, controller):
-        super().__init__(parent)
-        self.controller = controller
-
-        # Configure the grid columns to be equally spaced
-        for i in range(8):  # 8 roles
-            self.grid_columnconfigure(i, weight=1)
-
-        # Add each label to its own column in the same row
-        labels = [
-            "DPS One", "DPS Two", "DPS Three", "DPS Four",
-            "Tank One", "Tank Two", "Healer One", "Healer Two"
-        ]
-
-        for i, label_text in enumerate(labels):
-            label = ctk.CTkLabel(self, text=label_text, font=("Arial", 20))
-            label.grid(row=0, column=i, padx=10, pady=(20, 0), sticky="ew")
-
-        # If splits, add split group labels
-        if db.check_type() == 2:
-
-            # Add each label to its own column in the same row
-            labels = [
-                "Split Group 1", "Split Group 2", "Split Group 1", "Split Group 2",
-                "Split Group 1", "Split Group 2", "Split Group 1", "Split Group 2"
-            ]
-
-            for i, label_text in enumerate(labels):
-                label = ctk.CTkLabel(self, text=label_text, font=("Arial", 15))
-                label.grid(row=1, column=i, padx=10, pady=5, sticky="ew")
-
-
-
 # icon fetching from xivapi
 async def main():
     client = XivApiClient()
     async for row in client.sheet_rows("Item", fields=["Name", "LevelItem", "Icon"]):
         if int(row.fields["LevelItem"]["value"]) >= 740:
             print(
-                f"ID: {row.row_id}, Name: {row.fields["Name"]}, Item Level: {row.fields["LevelItem"]["value"]}, Icon id: {row.fields["Icon"]["id"]}")
+                f"ID: {row.row_id}, Name: {row.fields["Name"]},"
+                f" Item Level: {row.fields["LevelItem"]["value"]}, Icon id: {row.fields["Icon"]["id"]}")
 
 
 if __name__ == "__main__":
